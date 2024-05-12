@@ -1,0 +1,163 @@
+#root {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0;
+}
+
+.header-con {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  padding: 10px;
+  cursor: pointer;
+  background: azure;
+}
+
+.header-title {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gratitude-prompt {
+  font-size: 20px;
+  font-family: cursive;
+}
+
+.prompt-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #656565;
+  color: snow;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.preview-card-con {
+  display: grid;
+  grid-template-columns:  repeat(3, minmax(0, 1fr));
+  margin: 20px 0;
+  gap: 30px;
+}
+
+.preview-card {
+  background-color: cadetblue;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  min-height: 25vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
+  font-family: cursive;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/* Modal Container */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  /* Drop shadow effect */
+  width: 400px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Label and Input Styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  border-radius: 4px;
+  width: fit-content;
+  padding: 3px 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.display-tag {
+  border: solid 1px black;
+  background: darkgray;
+}
+
+.selected-tag {
+  outline: 2px black solid;
+  opacity: 0.5;
+
+}
+
+.modal-button {
+  background: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  outline: solid 0.5px;
+}
+
+.modal-submit {
+  background-color: #2f4f50;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .gratitude-prompt {
+    font-size: 17px;
+  }
+
+  .preview-card-con {
+    grid-template-columns: auto;
+  }
+
+}
