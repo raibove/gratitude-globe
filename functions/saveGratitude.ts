@@ -3,8 +3,8 @@ import { getStore } from "@netlify/blobs";
 export async function handler(req, context) {
     const body = JSON.parse(req.body);
 
-    const noteStore = getStore({ name: 'note' });
-    const previewStore = getStore({ name: 'preview' });
+    const noteStore = getStore('note');
+    const previewStore = getStore('preview');
 
     try {
         const id = body.id;

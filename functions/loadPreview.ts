@@ -1,7 +1,7 @@
 import { getStore } from "@netlify/blobs";
 
 export async function handler(req, context) {
-  const previewStore = getStore({ name: 'preview' });
+  const previewStore = getStore('preview');
 
   try {
     let previewData = await previewStore.get('all', { type: 'json' });
