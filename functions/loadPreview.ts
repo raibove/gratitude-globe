@@ -2,7 +2,7 @@ import { connectLambda, getStore } from "@netlify/blobs";
 
 export async function handler(req, context) {
   connectLambda(req)
-  const previewStore = getStore('preview');
+  const previewStore = getStore('preview1');
 
   try {
     let previewData = await previewStore.get('all', { type: 'json' });

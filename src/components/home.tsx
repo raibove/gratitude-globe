@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
     const [allGratitudes, setAllGratitudes] = useState<Gratitude[]>([]);
-    const [preview, setPreview] = useState<PreviewData>({})
+    const [preview, setPreview] = useState<PreviewData | null>(null)
     const [loading, setLoading] = useState(false);
 
     const loadPreview = async () => {
@@ -48,6 +48,7 @@ const Home = () => {
         }
         setLoading(false);
         console.log(result);
+        if(result !== "null")
         setPreview(JSON.parse(result));
     }
 
@@ -142,6 +143,8 @@ const Home = () => {
                 </div>
                 {loading ?
                     <p>Loading...</p> :
+                    preview === null ?
+                    <p></p>:
                     <>
                         <h2 style={{ marginTop: '20px', marginBottom: 0, padding: 0 }}>Some Gratitude left by others:</h2>
                         <div className='preview-card-con'>

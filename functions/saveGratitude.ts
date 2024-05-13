@@ -4,8 +4,8 @@ export async function handler(req, context) {
     connectLambda(req)
     const body = JSON.parse(req.body);
 
-    const noteStore = getStore('note');
-    const previewStore = getStore('preview');
+    const noteStore = getStore('note1');
+    const previewStore = getStore('preview1');
 
     try {
         const id = body.id;
