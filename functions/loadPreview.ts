@@ -1,6 +1,7 @@
-import { getStore } from "@netlify/blobs";
+import { connectLambda, getStore } from "@netlify/blobs";
 
 export async function handler(req, context) {
+  connectLambda(req)
   const previewStore = getStore('preview');
 
   try {
